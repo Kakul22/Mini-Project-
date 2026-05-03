@@ -13,12 +13,11 @@ model = tf.keras.models.load_model(MODEL_PATH)
 
 dummy = np.zeros((1, 128, 128, 3), dtype=np.float32)
 model.predict(dummy, verbose=0)
-print("✅ Model loaded and warmed up!")
+print(" Model loaded and warmed up!")
 
 DATASET_PATH = os.path.join("E:\\", "Plant Disease Detection", "dataset", "Plant_Village", "PlantVillage")
 class_names = sorted(os.listdir(DATASET_PATH))
 
-# ── Detailed Disease Info ─────────────────────────────────────
 disease_info = {
     "Pepper__bell___Bacterial_spot": {
         "severity": "Moderate",
